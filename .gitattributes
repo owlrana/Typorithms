@@ -1,0 +1,12 @@
+# Ensure all files use LF line endings in the repository
+* text=auto eol=lf
+
+# Specific rules for files
+*.sh text eol=lf
+*.json text eol=lf
+*.js text eol=lf
+*.ts text eol=lf
+*.md text eol=lf
+
+# Ignore binary files and node_modules
+node_modules/* -text
