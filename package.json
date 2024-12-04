@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "Data Structures and Algorithms in Typescript",
   "main": "index.js",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write .",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix",
-    "prepare": "husky install"
+    "clean": "rm -rf node_modules"
   },
   "keywords": [],
   "author": "Rahul Rana",
