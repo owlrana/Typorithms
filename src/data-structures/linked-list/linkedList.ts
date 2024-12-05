@@ -1,6 +1,3 @@
-import { swap } from '../../utils/swap';
-import { Array } from '../array/array';
-
 class Node<T> {
     value: T;
     next: Node<T> | null = null;
