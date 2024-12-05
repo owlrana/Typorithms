@@ -5,7 +5,7 @@ let isLearning: boolean = true;
 
 // Function with Type Annotations
 function greet(name: string): string {
-  return `Hello, ${name}! Welcome to TypeScript.`;
+    return `Hello, ${name}! Welcome to TypeScript.`;
 }
 
 // Arrow Function
@@ -14,8 +14,8 @@ const add = (a: number, b: number): number => a + b;
 // Array and Object Example
 let numbers: number[] = [1, 2, 3, 4, 5];
 let person: { name: string; age: number } = {
-  name: 'John Doe',
-  age: 30,
+    name: 'John Doe',
+    age: 30,
 };
 
 // Using Everything
