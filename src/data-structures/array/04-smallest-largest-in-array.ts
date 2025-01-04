@@ -1,15 +1,4 @@
-import * as readline from 'readline';
-
-// Function to create a readline interface
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout,
-});
-
-// Helper function to get user input as a promise
-const getInput = (query: string): Promise<string> => {
-    return new Promise((resolve) => rl.question(query, resolve));
-};
+import { closeInput, getInput } from "../../utils/input";
 
 // Function to find the largest and smallest elements in an array
 const findLargestAndSmallest = async (): Promise<void> => {
@@ -21,7 +10,6 @@ const findLargestAndSmallest = async (): Promise<void> => {
 
     if (isNaN(n) || n <= 0) {
         console.log('Please enter a valid number of elements.');
-        rl.close();
         return;
     }
 
@@ -32,7 +20,6 @@ const findLargestAndSmallest = async (): Promise<void> => {
 
     if (array.length < n) {
         console.log(`You entered less than ${n} elements. Please try again.`);
-        rl.close();
         return;
     }
 
@@ -69,8 +56,7 @@ const findLargestAndSmallest = async (): Promise<void> => {
     console.log(`The smallest element is: ${smallest}`);
     console.log(`The largest element is: ${largest}`);
 
-    // Close the readline interface
-    rl.close();
+    closeInput();
 };
 
 // Run the function

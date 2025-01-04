@@ -1,15 +1,4 @@
-import * as readline from 'readline';
-
-// Function to create a readline interface
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout,
-});
-
-// Helper function to get user input as a promise
-const getInput = (query: string): Promise<string> => {
-    return new Promise((resolve) => rl.question(query, resolve));
-};
+import { getInput, closeInput } from "../../utils/input";
 
 // Linear Search Implementation
 const linearSearch = async () => {
@@ -21,7 +10,6 @@ const linearSearch = async () => {
 
     if (isNaN(n) || n <= 0) {
         console.log('Please enter a valid size for the array.');
-        rl.close();
         return;
     }
 
@@ -31,7 +19,6 @@ const linearSearch = async () => {
 
     if (elements.length < n) {
         console.log(`You entered less than ${n} elements. Please try again.`);
-        rl.close();
         return;
     }
 
@@ -43,7 +30,6 @@ const linearSearch = async () => {
 
     if (isNaN(key)) {
         console.log('Please enter a valid number to search for.');
-        rl.close();
         return;
     }
 
@@ -61,7 +47,8 @@ const linearSearch = async () => {
         console.log(`${key} element was not found.`);
     }
 
-    rl.close();
+    // Close the readline interface
+    closeInput();
 };
 
 // Run the linear search function
