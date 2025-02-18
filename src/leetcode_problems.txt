@@ -1,4 +1,4 @@
-0. https://leetcode.com/problems/reverse-integer/
+0. [https://leetcode.com/problems/reverse-integer/](https://leetcode.com/problems/reverse-integer/)
 1. https://leetcode.com/problems/reverse-bits/
 2. https://leetcode.com/problems/check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence/
 3. https://leetcode.com/problems/string-matching-in-an-array/
